@@ -392,7 +392,11 @@ for keymap in 'emacs' 'viins'; do
   bindkey -M "$keymap" "$key_info[Right]" forward-char
 
   # Expand history on space.
-  bindkey -M "$keymap" ' ' magic-space
+  # >>BH - this is highly annoying and results in inability to
+  # >>do simple history replacement
+  # >>e.g. `^rmdir^rm -rf` can't be completed because of the
+  # >>magic space after `rm`
+  # bindkey -M "$keymap" ' ' magic-space
 
   # Clear screen.
   bindkey -M "$keymap" "$key_info[Control]L" clear-screen
