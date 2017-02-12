@@ -18,3 +18,8 @@ fi
 autoload -Uz promptinit
 promptinit
 prompt paradox
+
+alias gcd='cd `git rev-parse --show-toplevel`'
+
+export GOPATH=${ZOTDIR:-$HOME}/code/go
+export PATH=${GOPATH}/bin:${PATH}
