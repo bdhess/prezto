@@ -23,5 +23,5 @@ prompt paradox
 
 alias gcd='cd `git rev-parse --show-toplevel`'
 
-export GOPATH=${ZOTDIR:-$HOME}/code/go
+export GOPATH=${ZOTDIR:-$HOME}/Code/golang
 export PATH=${GOPATH}/bin:${PATH}
