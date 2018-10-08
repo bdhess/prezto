@@ -21,11 +21,6 @@ autoload -Uz promptinit
 promptinit
 prompt paradox
 
-alias gcd='cd `git rev-parse --show-toplevel`'
-
-export GOPATH=${ZOTDIR:-$HOME}/Code/golang
-export PATH=${GOPATH}/bin:${PATH}
-
 if [ -d ~/.bin ]; then
   export PATH=$PATH:~/.bin
 fi
