@@ -15,6 +15,10 @@ if [[ -s "${ZOTDIR:-$HOME}/.shell_secrets" ]]; then
   source "${ZOTDIR:-$HOME}/.shell_secrets"
 fi
 
+if [[ -s "${ZOTDIR:-$HOME}/.zlocal" ]]; then
+  source "${ZOTDIR:-$HOME}/.zlocal"
+fi
+
 bindkey "^R" history-incremental-search-backward
 
 autoload -Uz promptinit
