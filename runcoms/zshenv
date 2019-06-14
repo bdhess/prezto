@@ -9,3 +9,9 @@
 if [[ ( "$SHLVL" -eq 1 && ! -o LOGIN ) && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprofile"
 fi
+
+BREW_DIR="${ZDOTDIR:-$HOME}/.brew"
+if [ -d ${BREW_DIR}  ]; then
+  export PATH=${BREW_DIR}/bin:${PATH}
+  export LD_LIBRARY_PATH=${BREW_DIR}/lib
+fi
